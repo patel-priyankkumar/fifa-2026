@@ -175,8 +175,8 @@
     "venue": "Atlanta",
     "home_team": "Spain",
     "away_team": "Cape Verde",
-    "home_score": 5,
-    "away_score": 2,
+    "home_score": null,
+    "away_score": null,
     "home_penalty": null,
     "away_penalty": null,
     "status": "scheduled"
