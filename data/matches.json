@@ -214,11 +214,11 @@
     "venue": "New York/New Jersey",
     "home_team": "France",
     "away_team": "Senegal",
-    "home_score": 3,
-    "away_score": 2,
+    "home_score": null,
+    "away_score": null,
     "home_penalty": null,
     "away_penalty": null,
-    "status": "completed"
+    "status": "scheduled"
   },
   {
     "match_no": 18,
