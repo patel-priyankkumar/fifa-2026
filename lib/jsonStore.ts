@@ -1,10 +1,9 @@
 import fs from "fs/promises";
 import path from "path";
-import { Entrant, Match } from "./scoring";
+import type { Match } from "./scoring";
 
 type GitHubFile<T> = { data: T; sha?: string };
 
-const PEOPLE_FILE = "data/people.json";
 const MATCHES_FILE = "data/matches.json";
 
 function repoConfig() {
@@ -19,26 +18,33 @@ function localPath(filePath: string) {
   return path.join(process.cwd(), filePath);
 }
 
+function normalizeNumber(value: unknown) {
+  if (value === null || value === undefined || value === "") return null;
+  const numberValue = Number(value);
+  return Number.isNaN(numberValue) ? null : numberValue;
+}
+
 function normalizeMatch(raw: any): Match {
+  const homeScore = normalizeNumber(raw.home_score ?? raw.homeScore);
+  const awayScore = normalizeNumber(raw.away_score ?? raw.awayScore);
+
+  const status =
+    raw.status === "completed" && typeof homeScore === "number" && typeof awayScore === "number"
+      ? "completed"
+      : "scheduled";
+
   return {
     match_no: Number(raw.match_no ?? raw.matchNo),
     stage: String(raw.stage ?? ""),
-    match_date: String(raw.match_date ?? raw.dateTime),
+    match_date: String(raw.match_date ?? raw.dateTime ?? ""),
     venue: String(raw.venue ?? ""),
     home_team: String(raw.home_team ?? raw.homeTeam ?? ""),
     away_team: String(raw.away_team ?? raw.awayTeam ?? ""),
-    home_score: raw.home_score === undefined ? null : raw.home_score,
-    away_score: raw.away_score === undefined ? null : raw.away_score,
-    home_penalty: raw.home_penalty === undefined ? null : raw.home_penalty,
-    away_penalty: raw.away_penalty === undefined ? null : raw.away_penalty,
-    status:
-      raw.status ??
-      (raw.home_score === undefined ||
-      raw.away_score === undefined ||
-      raw.home_score === null ||
-      raw.away_score === null
-        ? "scheduled"
-        : "completed"),
+    home_score: status === "completed" ? homeScore : null,
+    away_score: status === "completed" ? awayScore : null,
+    home_penalty: status === "completed" ? normalizeNumber(raw.home_penalty ?? raw.homePenalty) : null,
+    away_penalty: status === "completed" ? normalizeNumber(raw.away_penalty ?? raw.awayPenalty) : null,
+    status,
   };
 }
 
@@ -58,7 +64,7 @@ function serializeMatch(match: Match) {
   };
 }
 
-async function readJson<T>(filePath: string): Promise<GitHubFile<T>> {
+export async function readJson<T>(filePath: string): Promise<GitHubFile<T>> {
   const cfg = repoConfig();
 
   if (cfg) {
@@ -73,9 +79,7 @@ async function readJson<T>(filePath: string): Promise<GitHubFile<T>> {
     });
 
     if (!res.ok) {
-      throw new Error(
-        `Could not read ${filePath} from GitHub: ${res.status} ${await res.text()}`,
-      );
+      throw new Error(`Could not read ${filePath} from GitHub: ${res.status} ${await res.text()}`);
     }
 
     const payload = await res.json();
@@ -88,7 +92,7 @@ async function readJson<T>(filePath: string): Promise<GitHubFile<T>> {
   return { data: JSON.parse(text) };
 }
 
-async function writeJson<T>(filePath: string, data: T, sha?: string) {
+export async function writeJson<T>(filePath: string, data: T, sha?: string) {
   const cfg = repoConfig();
   const content = JSON.stringify(data, null, 2) + "\n";
 
@@ -116,30 +120,12 @@ async function writeJson<T>(filePath: string, data: T, sha?: string) {
     });
 
     if (!res.ok) {
-      throw new Error(
-        `Could not write ${filePath} to GitHub: ${res.status} ${await res.text()}`,
-      );
+      throw new Error(`Could not write ${filePath} to GitHub: ${res.status} ${await res.text()}`);
     }
     return;
   }
 
   await fs.writeFile(localPath(filePath), content, "utf8");
-}
-
-export async function readPeople() {
-  const file = await readJson<Entrant[]>(PEOPLE_FILE);
-  return file.data.map((p) => ({
-    id: String(p.id),
-    name: String(p.name || ""),
-    team: String(p.team || ""),
-    paid: Boolean(p.paid ?? true),
-    created_at: p.created_at,
-  }));
-}
-
-export async function writePeople(people: Entrant[]) {
-  const current = await readJson<Entrant[]>(PEOPLE_FILE);
-  await writeJson(PEOPLE_FILE, people, current.sha);
 }
 
 export async function readMatches() {

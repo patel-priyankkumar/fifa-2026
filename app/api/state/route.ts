@@ -1,25 +1,24 @@
-import { NextResponse } from 'next/server';
-import { buildLeaderboard, getPayouts, todayOrNextMatches } from '@/lib/scoring';
-import { isAdmin } from '@/lib/auth';
-import { readMatches, readPeople } from '@/lib/jsonStore';
+import { NextResponse } from "next/server";
+import { getSession } from "@/lib/auth";
+import { readMatches } from "@/lib/jsonStore";
+import { buildLeaderboard, getPayouts, readMemberFiles, todayOrNextMatches } from "@/lib/scoring";
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 export async function GET() {
-  try {
-    const [entrants, matches] = await Promise.all([readPeople(), readMatches()]);
-    const leaderboard = buildLeaderboard(entrants, matches);
-    const featured = todayOrNextMatches(matches);
+  const session = await getSession();
+  const matches = await readMatches();
+  const members = await readMemberFiles();
+  const leaderboard = buildLeaderboard(members, matches);
+  const payouts = getPayouts(members);
 
-    return NextResponse.json({
-      isAdmin: await isAdmin(),
-      entrants,
-      matches,
-      leaderboard,
-      featured,
-      payouts: getPayouts(entrants)
-    });
-  } catch (error) {
-    return NextResponse.json({ error: error instanceof Error ? error.message : 'Could not load JSON data.' }, { status: 500 });
-  }
+  return NextResponse.json({
+    isAdmin: session.isAdmin,
+    members,
+    entrants: leaderboard,
+    matches,
+    leaderboard,
+    featured: todayOrNextMatches(matches),
+    payouts,
+  });
 }

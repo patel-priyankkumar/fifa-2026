@@ -1,13 +1,19 @@
-import { NextResponse } from 'next/server';
-import { requireAdmin } from '@/lib/auth';
-import { readMatches } from '@/lib/jsonStore';
+import { NextResponse } from "next/server";
+import { getSession } from "@/lib/auth";
+import { readMatches } from "@/lib/jsonStore";
+import { readMemberFiles } from "@/lib/scoring";
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 export async function POST() {
-  const unauthorized = await requireAdmin();
-  if (unauthorized) return unauthorized;
-
+  const session = await getSession();
+  if (!session.isAdmin) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   const matches = await readMatches();
-  return NextResponse.json({ ok: true, count: matches.length, message: 'JSON schedule is already loaded from data/matches.json.' });
+  const members = await readMemberFiles();
+  return NextResponse.json({
+    ok: true,
+    message: `Data ready: ${matches.length} matches and ${members.length} member prediction files.`,
+    matches: matches.length,
+    members: members.length,
+  });
 }

@@ -1,57 +1,78 @@
-import { NextResponse } from "next/server";
-import { requireAdmin } from "@/lib/auth";
+import { NextRequest, NextResponse } from "next/server";
+import { getSession } from "@/lib/auth";
 import { readMatches, writeMatches } from "@/lib/jsonStore";
 
 export const dynamic = "force-dynamic";
 
-function scoreValue(value: unknown) {
+function parseOptionalNumber(value: unknown) {
   if (value === "" || value === null || value === undefined) return null;
-  const parsed = Number(value);
-  return Number.isFinite(parsed) && parsed >= 0 ? parsed : null;
+  const numberValue = Number(value);
+  return Number.isNaN(numberValue) ? null : numberValue;
+}
+
+function asText(value: unknown) {
+  return String(value ?? "").trim();
 }
 
 export async function PATCH(
-  request: Request,
-  { params }: { params: Promise<{ matchNo: string }> },
+  request: NextRequest,
+  context: { params: Promise<{ matchNo: string }> },
 ) {
-  const unauthorized = await requireAdmin();
-  if (unauthorized) return unauthorized;
-
-  const { matchNo } = await params;
-  const body = await request.json();
-  const homeScore = scoreValue(body.home_score);
-  const awayScore = scoreValue(body.away_score);
-  const homePenalty = scoreValue(body.home_penalty);
-  const awayPenalty = scoreValue(body.away_penalty);
-  const status =
-    homeScore === null || awayScore === null ? "scheduled" : "completed";
-
-  try {
-    const matches = await readMatches();
-    const index = matches.findIndex(
-      (match) => match.match_no === Number(matchNo),
-    );
-    if (index === -1)
-      return NextResponse.json({ error: "Match not found." }, { status: 404 });
-
-    const next = [...matches];
-    next[index] = {
-      ...next[index],
-      home_score: homeScore,
-      away_score: awayScore,
-      home_penalty: homePenalty,
-      away_penalty: awayPenalty,
-      status,
-    };
-    await writeMatches(next);
-    return NextResponse.json({ match: next[index] });
-  } catch (error) {
-    return NextResponse.json(
-      {
-        error:
-          error instanceof Error ? error.message : "Could not update match.",
-      },
-      { status: 500 },
-    );
+  const session = await getSession();
+  if (!session.isAdmin) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
+
+  const { matchNo } = await context.params;
+  const targetMatchNo = Number(matchNo);
+  if (Number.isNaN(targetMatchNo)) {
+    return NextResponse.json({ error: "Invalid match number" }, { status: 400 });
+  }
+
+  const body = await request.json();
+  const homeTeam = asText(body.home_team);
+  const awayTeam = asText(body.away_team);
+  const homeScoreRaw = body.home_score;
+  const awayScoreRaw = body.away_score;
+  const homePenaltyRaw = body.home_penalty;
+  const awayPenaltyRaw = body.away_penalty;
+
+  const hasHomeScore = homeScoreRaw !== "" && homeScoreRaw !== null && homeScoreRaw !== undefined;
+  const hasAwayScore = awayScoreRaw !== "" && awayScoreRaw !== null && awayScoreRaw !== undefined;
+
+  if (hasHomeScore !== hasAwayScore) {
+    return NextResponse.json({ error: "Enter both scores or clear both scores." }, { status: 400 });
+  }
+
+  const homeScore = parseOptionalNumber(homeScoreRaw);
+  const awayScore = parseOptionalNumber(awayScoreRaw);
+  const homePenalty = parseOptionalNumber(homePenaltyRaw);
+  const awayPenalty = parseOptionalNumber(awayPenaltyRaw);
+  const isCompleted = homeScore !== null && awayScore !== null;
+
+  const matches = await readMatches();
+  let found = false;
+
+  const updatedMatches = matches.map((match) => {
+    if (match.match_no !== targetMatchNo) return match;
+    found = true;
+    return {
+      ...match,
+      home_team: homeTeam || match.home_team,
+      away_team: awayTeam || match.away_team,
+      home_score: isCompleted ? homeScore : null,
+      away_score: isCompleted ? awayScore : null,
+      home_penalty: isCompleted ? homePenalty : null,
+      away_penalty: isCompleted ? awayPenalty : null,
+      status: isCompleted ? "completed" as const : "scheduled" as const,
+    };
+  });
+
+  if (!found) {
+    return NextResponse.json({ error: "Match not found" }, { status: 404 });
+  }
+
+  await writeMatches(updatedMatches);
+
+  return NextResponse.json({ ok: true, message: "Match saved. Leaderboard will recalculate automatically." });
 }
