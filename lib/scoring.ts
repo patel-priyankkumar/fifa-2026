@@ -311,3 +311,66 @@ export function buildLeaderboard(
       return a.name.localeCompare(b.name);
     });
 }
+
+export function getPayouts(members: Array<MemberFile & { id?: string }>) {
+  const paidEntries = members.filter((member) => member.paid ?? true).length;
+  const pot = paidEntries * 30;
+
+  return {
+    paidEntries,
+    pot,
+    first: pot * 0.8,
+    second: pot * 0.2,
+  };
+}
+
+function sameTorontoDate(a: Date, b: Date) {
+  const formatter = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/Toronto",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+
+  return formatter.format(a) === formatter.format(b);
+}
+
+export function todayOrNextMatches(matches: Match[]) {
+  const now = new Date();
+
+  const upcoming = [...matches]
+    .filter((match) => match.status !== "completed")
+    .sort(
+      (a, b) =>
+        new Date(a.match_date).getTime() - new Date(b.match_date).getTime(),
+    );
+
+  const today = upcoming.filter((match) =>
+    sameTorontoDate(new Date(match.match_date), now),
+  );
+
+  if (today.length > 0) {
+    return {
+      label: "Today's Matches",
+      matches: today,
+    };
+  }
+
+  const nextMatch = upcoming[0];
+
+  if (!nextMatch) {
+    return {
+      label: "Tournament Completed",
+      matches: [],
+    };
+  }
+
+  const nextDate = new Date(nextMatch.match_date);
+
+  return {
+    label: `Next Matches`,
+    matches: upcoming.filter((match) =>
+      sameTorontoDate(new Date(match.match_date), nextDate),
+    ),
+  };
+}
