@@ -6,8 +6,13 @@
     "venue": "Mexico City",
     "home_team": "Mexico",
     "away_team": "South Africa",
+<<<<<<< HEAD
     "home_score": 2,
     "away_score": 1,
+=======
+    "home_score": null,
+    "away_score": null,
+>>>>>>> 433d449 (update 1)
     "home_penalty": null,
     "away_penalty": null,
     "status": "completed"
@@ -19,8 +24,13 @@
     "venue": "Guadalajara",
     "home_team": "Rep. of Korea",
     "away_team": "Czech Rep.",
+<<<<<<< HEAD
     "home_score": 2,
     "away_score": 1,
+=======
+    "home_score": null,
+    "away_score": null,
+>>>>>>> 433d449 (update 1)
     "home_penalty": null,
     "away_penalty": null,
     "status": "completed"
@@ -32,8 +42,13 @@
     "venue": "Toronto",
     "home_team": "Canada",
     "away_team": "Bosnia/Herzeg.",
+<<<<<<< HEAD
     "home_score": 1,
     "away_score": 1,
+=======
+    "home_score": null,
+    "away_score": null,
+>>>>>>> 433d449 (update 1)
     "home_penalty": null,
     "away_penalty": null,
     "status": "completed"
@@ -45,8 +60,13 @@
     "venue": "Los Angeles",
     "home_team": "USA",
     "away_team": "Paraguay",
+<<<<<<< HEAD
     "home_score": 4,
     "away_score": 1,
+=======
+    "home_score": null,
+    "away_score": null,
+>>>>>>> 433d449 (update 1)
     "home_penalty": null,
     "away_penalty": null,
     "status": "completed"
@@ -58,8 +78,13 @@
     "venue": "Boston",
     "home_team": "Haiti",
     "away_team": "Scotland",
+<<<<<<< HEAD
     "home_score": 0,
     "away_score": 1,
+=======
+    "home_score": null,
+    "away_score": null,
+>>>>>>> 433d449 (update 1)
     "home_penalty": null,
     "away_penalty": null,
     "status": "completed"
@@ -71,8 +96,13 @@
     "venue": "Vancouver",
     "home_team": "Australia",
     "away_team": "Turkey",
+<<<<<<< HEAD
     "home_score": 2,
     "away_score": 0,
+=======
+    "home_score": null,
+    "away_score": null,
+>>>>>>> 433d449 (update 1)
     "home_penalty": null,
     "away_penalty": null,
     "status": "completed"
@@ -84,8 +114,13 @@
     "venue": "New York/New Jersey",
     "home_team": "Brazil",
     "away_team": "Morocco",
+<<<<<<< HEAD
     "home_score": 1,
     "away_score": 1,
+=======
+    "home_score": null,
+    "away_score": null,
+>>>>>>> 433d449 (update 1)
     "home_penalty": null,
     "away_penalty": null,
     "status": "completed"
@@ -97,8 +132,13 @@
     "venue": "San Francisco Bay Area",
     "home_team": "Qatar",
     "away_team": "Switzerland",
+<<<<<<< HEAD
     "home_score": 1,
     "away_score": 1,
+=======
+    "home_score": null,
+    "away_score": null,
+>>>>>>> 433d449 (update 1)
     "home_penalty": null,
     "away_penalty": null,
     "status": "completed"
@@ -110,8 +150,13 @@
     "venue": "Philadelphia",
     "home_team": "Ivory Coast",
     "away_team": "Ecuador",
+<<<<<<< HEAD
     "home_score": 1,
     "away_score": 0,
+=======
+    "home_score": null,
+    "away_score": null,
+>>>>>>> 433d449 (update 1)
     "home_penalty": null,
     "away_penalty": null,
     "status": "completed"
@@ -123,8 +168,13 @@
     "venue": "Houston",
     "home_team": "Germany",
     "away_team": "Curaçao",
+<<<<<<< HEAD
     "home_score": 7,
     "away_score": 1,
+=======
+    "home_score": null,
+    "away_score": null,
+>>>>>>> 433d449 (update 1)
     "home_penalty": null,
     "away_penalty": null,
     "status": "completed"
@@ -136,8 +186,13 @@
     "venue": "Dallas",
     "home_team": "Netherlands",
     "away_team": "Japan",
+<<<<<<< HEAD
     "home_score": 2,
     "away_score": 2,
+=======
+    "home_score": null,
+    "away_score": null,
+>>>>>>> 433d449 (update 1)
     "home_penalty": null,
     "away_penalty": null,
     "status": "completed"
@@ -149,8 +204,13 @@
     "venue": "Monterrey",
     "home_team": "Sweden",
     "away_team": "Tunisia",
+<<<<<<< HEAD
     "home_score": 5,
     "away_score": 1,
+=======
+    "home_score": null,
+    "away_score": null,
+>>>>>>> 433d449 (update 1)
     "home_penalty": null,
     "away_penalty": null,
     "status": "completed"
