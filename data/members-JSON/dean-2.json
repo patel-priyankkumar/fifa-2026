@@ -1,5 +1,5 @@
 {
-  "name": "Cassandra Iafrate",
+  "name": "Dean 2",
   "paid": true,
   "entry_fee": 30,
   "predictions": [
@@ -8,7 +8,7 @@
       "stage": "Group Stage",
       "home_team": "Mexico",
       "away_team": "South Africa",
-      "predicted_home_score": 2,
+      "predicted_home_score": 1,
       "predicted_away_score": 0,
       "predicted_winner": "Mexico"
     },
@@ -27,15 +27,15 @@
       "home_team": "Canada",
       "away_team": "Bosnia/Herzeg.",
       "predicted_home_score": 1,
-      "predicted_away_score": 1,
-      "predicted_winner": "Draw"
+      "predicted_away_score": 0,
+      "predicted_winner": "Canada"
     },
     {
       "match_no": 4,
       "stage": "Group Stage",
       "home_team": "USA",
       "away_team": "Paraguay",
-      "predicted_home_score": 2,
+      "predicted_home_score": 1,
       "predicted_away_score": 0,
       "predicted_winner": "USA"
     },
@@ -44,8 +44,8 @@
       "stage": "Group Stage",
       "home_team": "Haiti",
       "away_team": "Scotland",
-      "predicted_home_score": 0,
-      "predicted_away_score": 3,
+      "predicted_home_score": 1,
+      "predicted_away_score": 2,
       "predicted_winner": "Scotland"
     },
     {
@@ -53,8 +53,8 @@
       "stage": "Group Stage",
       "home_team": "Australia",
       "away_team": "Turkey",
-      "predicted_home_score": 0,
-      "predicted_away_score": 0,
+      "predicted_home_score": 1,
+      "predicted_away_score": 1,
       "predicted_winner": "Draw"
     },
     {
@@ -63,16 +63,16 @@
       "home_team": "Brazil",
       "away_team": "Morocco",
       "predicted_home_score": 2,
-      "predicted_away_score": 2,
-      "predicted_winner": "Draw"
+      "predicted_away_score": 0,
+      "predicted_winner": "Brazil"
     },
     {
       "match_no": 8,
       "stage": "Group Stage",
       "home_team": "Qatar",
       "away_team": "Switzerland",
-      "predicted_home_score": 0,
-      "predicted_away_score": 4,
+      "predicted_home_score": 1,
+      "predicted_away_score": 2,
       "predicted_winner": "Switzerland"
     },
     {
@@ -81,7 +81,7 @@
       "home_team": "Ivory Coast",
       "away_team": "Ecuador",
       "predicted_home_score": 1,
-      "predicted_away_score": 3,
+      "predicted_away_score": 2,
       "predicted_winner": "Ecuador"
     },
     {
@@ -89,7 +89,7 @@
       "stage": "Group Stage",
       "home_team": "Germany",
       "away_team": "Curaçao",
-      "predicted_home_score": 4,
+      "predicted_home_score": 3,
       "predicted_away_score": 0,
       "predicted_winner": "Germany"
     },
@@ -98,16 +98,16 @@
       "stage": "Group Stage",
       "home_team": "Netherlands",
       "away_team": "Japan",
-      "predicted_home_score": 2,
+      "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": "Netherlands"
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 12,
       "stage": "Group Stage",
       "home_team": "Sweden",
       "away_team": "Tunisia",
-      "predicted_home_score": 1,
+      "predicted_home_score": 2,
       "predicted_away_score": 0,
       "predicted_winner": "Sweden"
     },
@@ -116,16 +116,16 @@
       "stage": "Group Stage",
       "home_team": "Saudi Arabia",
       "away_team": "Uruguay",
-      "predicted_home_score": 2,
-      "predicted_away_score": 1,
-      "predicted_winner": "Saudi Arabia"
+      "predicted_home_score": 1,
+      "predicted_away_score": 2,
+      "predicted_winner": "Uruguay"
     },
     {
       "match_no": 14,
       "stage": "Group Stage",
       "home_team": "Spain",
       "away_team": "Cape Verde",
-      "predicted_home_score": 3,
+      "predicted_home_score": 2,
       "predicted_away_score": 0,
       "predicted_winner": "Spain"
     },
@@ -135,8 +135,8 @@
       "home_team": "IR Iran",
       "away_team": "New Zealand",
       "predicted_home_score": 1,
-      "predicted_away_score": 0,
-      "predicted_winner": "IR Iran"
+      "predicted_away_score": 1,
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 16,
@@ -144,16 +144,16 @@
       "home_team": "Belgium",
       "away_team": "Egypt",
       "predicted_home_score": 2,
-      "predicted_away_score": 2,
-      "predicted_winner": "Draw"
+      "predicted_away_score": 1,
+      "predicted_winner": "Belgium"
     },
     {
       "match_no": 17,
       "stage": "Group Stage",
       "home_team": "France",
       "away_team": "Senegal",
-      "predicted_home_score": 3,
-      "predicted_away_score": 0,
+      "predicted_home_score": 2,
+      "predicted_away_score": 1,
       "predicted_winner": "France"
     },
     {
@@ -161,8 +161,8 @@
       "stage": "Group Stage",
       "home_team": "Iraq",
       "away_team": "Norway",
-      "predicted_home_score": 0,
-      "predicted_away_score": 3,
+      "predicted_home_score": 1,
+      "predicted_away_score": 2,
       "predicted_winner": "Norway"
     },
     {
@@ -171,7 +171,7 @@
       "home_team": "Argentina",
       "away_team": "Algeria",
       "predicted_home_score": 2,
-      "predicted_away_score": 0,
+      "predicted_away_score": 1,
       "predicted_winner": "Argentina"
     },
     {
@@ -179,7 +179,7 @@
       "stage": "Group Stage",
       "home_team": "Austria",
       "away_team": "Jordan",
-      "predicted_home_score": 2,
+      "predicted_home_score": 1,
       "predicted_away_score": 0,
       "predicted_winner": "Austria"
     },
@@ -188,7 +188,7 @@
       "stage": "Group Stage",
       "home_team": "Ghana",
       "away_team": "Panama",
-      "predicted_home_score": 2,
+      "predicted_home_score": 1,
       "predicted_away_score": 0,
       "predicted_winner": "Ghana"
     },
@@ -198,8 +198,8 @@
       "home_team": "England",
       "away_team": "Croatia",
       "predicted_home_score": 1,
-      "predicted_away_score": 2,
-      "predicted_winner": "Croatia"
+      "predicted_away_score": 0,
+      "predicted_winner": "England"
     },
     {
       "match_no": 23,
@@ -216,7 +216,7 @@
       "home_team": "Uzbekistan",
       "away_team": "Colombia",
       "predicted_home_score": 0,
-      "predicted_away_score": 3,
+      "predicted_away_score": 2,
       "predicted_winner": "Colombia"
     },
     {
@@ -224,7 +224,7 @@
       "stage": "Group Stage",
       "home_team": "Czech Rep.",
       "away_team": "South Africa",
-      "predicted_home_score": 3,
+      "predicted_home_score": 1,
       "predicted_away_score": 0,
       "predicted_winner": "Czech Rep."
     },
@@ -242,7 +242,7 @@
       "stage": "Group Stage",
       "home_team": "Canada",
       "away_team": "Qatar",
-      "predicted_home_score": 2,
+      "predicted_home_score": 3,
       "predicted_away_score": 1,
       "predicted_winner": "Canada"
     },
@@ -260,7 +260,7 @@
       "stage": "Group Stage",
       "home_team": "Brazil",
       "away_team": "Haiti",
-      "predicted_home_score": 6,
+      "predicted_home_score": 3,
       "predicted_away_score": 0,
       "predicted_winner": "Brazil"
     },
@@ -269,16 +269,16 @@
       "stage": "Group Stage",
       "home_team": "Scotland",
       "away_team": "Morocco",
-      "predicted_home_score": 2,
-      "predicted_away_score": 2,
-      "predicted_winner": "Draw"
+      "predicted_home_score": 0,
+      "predicted_away_score": 1,
+      "predicted_winner": "Morocco"
     },
     {
       "match_no": 31,
       "stage": "Group Stage",
       "home_team": "Turkey",
       "away_team": "Paraguay",
-      "predicted_home_score": 3,
+      "predicted_home_score": 2,
       "predicted_away_score": 1,
       "predicted_winner": "Turkey"
     },
@@ -287,9 +287,9 @@
       "stage": "Group Stage",
       "home_team": "USA",
       "away_team": "Australia",
-      "predicted_home_score": 1,
+      "predicted_home_score": 2,
       "predicted_away_score": 1,
-      "predicted_winner": "Draw"
+      "predicted_winner": "USA"
     },
     {
       "match_no": 33,
@@ -297,7 +297,7 @@
       "home_team": "Germany",
       "away_team": "Ivory Coast",
       "predicted_home_score": 2,
-      "predicted_away_score": 1,
+      "predicted_away_score": 0,
       "predicted_winner": "Germany"
     },
     {
@@ -305,8 +305,8 @@
       "stage": "Group Stage",
       "home_team": "Ecuador",
       "away_team": "Curaçao",
-      "predicted_home_score": 3,
-      "predicted_away_score": 1,
+      "predicted_home_score": 1,
+      "predicted_away_score": 0,
       "predicted_winner": "Ecuador"
     },
     {
@@ -314,8 +314,8 @@
       "stage": "Group Stage",
       "home_team": "Netherlands",
       "away_team": "Sweden",
-      "predicted_home_score": 3,
-      "predicted_away_score": 2,
+      "predicted_home_score": 1,
+      "predicted_away_score": 0,
       "predicted_winner": "Netherlands"
     },
     {
@@ -324,7 +324,7 @@
       "home_team": "Tunisia",
       "away_team": "Japan",
       "predicted_home_score": 0,
-      "predicted_away_score": 3,
+      "predicted_away_score": 2,
       "predicted_winner": "Japan"
     },
     {
@@ -359,8 +359,8 @@
       "stage": "Group Stage",
       "home_team": "New Zealand",
       "away_team": "Egypt",
-      "predicted_home_score": 0,
-      "predicted_away_score": 3,
+      "predicted_home_score": 1,
+      "predicted_away_score": 2,
       "predicted_winner": "Egypt"
     },
     {
@@ -368,16 +368,16 @@
       "stage": "Group Stage",
       "home_team": "Norway",
       "away_team": "Senegal",
-      "predicted_home_score": 3,
-      "predicted_away_score": 0,
-      "predicted_winner": "Norway"
+      "predicted_home_score": 0,
+      "predicted_away_score": 1,
+      "predicted_winner": "Senegal"
     },
     {
       "match_no": 42,
       "stage": "Group Stage",
       "home_team": "France",
       "away_team": "Iraq",
-      "predicted_home_score": 4,
+      "predicted_home_score": 2,
       "predicted_away_score": 0,
       "predicted_winner": "France"
     },
@@ -386,9 +386,9 @@
       "stage": "Group Stage",
       "home_team": "Argentina",
       "away_team": "Austria",
-      "predicted_home_score": 2,
+      "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": "Argentina"
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 44,
@@ -396,8 +396,8 @@
       "home_team": "Jordan",
       "away_team": "Algeria",
       "predicted_home_score": 1,
-      "predicted_away_score": 1,
-      "predicted_winner": "Draw"
+      "predicted_away_score": 2,
+      "predicted_winner": "Algeria"
     },
     {
       "match_no": 45,
@@ -413,8 +413,8 @@
       "stage": "Group Stage",
       "home_team": "Panama",
       "away_team": "Croatia",
-      "predicted_home_score": 0,
-      "predicted_away_score": 3,
+      "predicted_home_score": 1,
+      "predicted_away_score": 2,
       "predicted_winner": "Croatia"
     },
     {
@@ -432,16 +432,16 @@
       "home_team": "Colombia",
       "away_team": "DR Congo",
       "predicted_home_score": 1,
-      "predicted_away_score": 1,
-      "predicted_winner": "Draw"
+      "predicted_away_score": 0,
+      "predicted_winner": "Colombia"
     },
     {
       "match_no": 49,
       "stage": "Group Stage",
       "home_team": "Scotland",
       "away_team": "Brazil",
-      "predicted_home_score": 0,
-      "predicted_away_score": 1,
+      "predicted_home_score": 1,
+      "predicted_away_score": 3,
       "predicted_winner": "Brazil"
     },
     {
@@ -449,7 +449,7 @@
       "stage": "Group Stage",
       "home_team": "Morocco",
       "away_team": "Haiti",
-      "predicted_home_score": 5,
+      "predicted_home_score": 2,
       "predicted_away_score": 0,
       "predicted_winner": "Morocco"
     },
@@ -458,17 +458,17 @@
       "stage": "Group Stage",
       "home_team": "Switzerland",
       "away_team": "Canada",
-      "predicted_home_score": 2,
-      "predicted_away_score": 0,
-      "predicted_winner": "Switzerland"
+      "predicted_home_score": 1,
+      "predicted_away_score": 2,
+      "predicted_winner": "Canada"
     },
     {
       "match_no": 52,
       "stage": "Group Stage",
       "home_team": "Bosnia/Herzeg.",
       "away_team": "Qatar",
-      "predicted_home_score": 3,
-      "predicted_away_score": 1,
+      "predicted_home_score": 1,
+      "predicted_away_score": 0,
       "predicted_winner": "Bosnia/Herzeg."
     },
     {
@@ -476,18 +476,18 @@
       "stage": "Group Stage",
       "home_team": "Czech Rep.",
       "away_team": "Mexico",
-      "predicted_home_score": 2,
+      "predicted_home_score": 1,
       "predicted_away_score": 2,
-      "predicted_winner": "Draw"
+      "predicted_winner": "Mexico"
     },
     {
       "match_no": 54,
       "stage": "Group Stage",
       "home_team": "South Africa",
       "away_team": "Rep. of Korea",
-      "predicted_home_score": 0,
+      "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": "Rep. of Korea"
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 55,
@@ -495,7 +495,7 @@
       "home_team": "Curaçao",
       "away_team": "Ivory Coast",
       "predicted_home_score": 0,
-      "predicted_away_score": 2,
+      "predicted_away_score": 1,
       "predicted_winner": "Ivory Coast"
     },
     {
@@ -504,7 +504,7 @@
       "home_team": "Ecuador",
       "away_team": "Germany",
       "predicted_home_score": 1,
-      "predicted_away_score": 2,
+      "predicted_away_score": 3,
       "predicted_winner": "Germany"
     },
     {
@@ -512,17 +512,17 @@
       "stage": "Group Stage",
       "home_team": "Japan",
       "away_team": "Sweden",
-      "predicted_home_score": 1,
+      "predicted_home_score": 2,
       "predicted_away_score": 1,
-      "predicted_winner": "Draw"
+      "predicted_winner": "Japan"
     },
     {
       "match_no": 58,
       "stage": "Group Stage",
       "home_team": "Tunisia",
       "away_team": "Netherlands",
-      "predicted_home_score": 0,
-      "predicted_away_score": 3,
+      "predicted_home_score": 1,
+      "predicted_away_score": 2,
       "predicted_winner": "Netherlands"
     },
     {
@@ -540,8 +540,8 @@
       "home_team": "Paraguay",
       "away_team": "Australia",
       "predicted_home_score": 1,
-      "predicted_away_score": 1,
-      "predicted_winner": "Draw"
+      "predicted_away_score": 0,
+      "predicted_winner": "Paraguay"
     },
     {
       "match_no": 61,
@@ -549,16 +549,16 @@
       "home_team": "Norway",
       "away_team": "France",
       "predicted_home_score": 1,
-      "predicted_away_score": 1,
-      "predicted_winner": "Draw"
+      "predicted_away_score": 3,
+      "predicted_winner": "France"
     },
     {
       "match_no": 62,
       "stage": "Group Stage",
       "home_team": "Senegal",
       "away_team": "Iraq",
-      "predicted_home_score": 2,
-      "predicted_away_score": 1,
+      "predicted_home_score": 1,
+      "predicted_away_score": 0,
       "predicted_winner": "Senegal"
     },
     {
@@ -567,8 +567,8 @@
       "home_team": "Egypt",
       "away_team": "IR Iran",
       "predicted_home_score": 0,
-      "predicted_away_score": 0,
-      "predicted_winner": "Draw"
+      "predicted_away_score": 1,
+      "predicted_winner": "IR Iran"
     },
     {
       "match_no": 64,
@@ -576,7 +576,7 @@
       "home_team": "New Zealand",
       "away_team": "Belgium",
       "predicted_home_score": 0,
-      "predicted_away_score": 5,
+      "predicted_away_score": 2,
       "predicted_winner": "Belgium"
     },
     {
@@ -584,9 +584,9 @@
       "stage": "Group Stage",
       "home_team": "Cape Verde",
       "away_team": "Saudi Arabia",
-      "predicted_home_score": 1,
+      "predicted_home_score": 0,
       "predicted_away_score": 1,
-      "predicted_winner": "Draw"
+      "predicted_winner": "Saudi Arabia"
     },
     {
       "match_no": 66,
@@ -603,7 +603,7 @@
       "home_team": "Panama",
       "away_team": "England",
       "predicted_home_score": 0,
-      "predicted_away_score": 5,
+      "predicted_away_score": 2,
       "predicted_winner": "England"
     },
     {
@@ -611,9 +611,9 @@
       "stage": "Group Stage",
       "home_team": "Croatia",
       "away_team": "Ghana",
-      "predicted_home_score": 1,
+      "predicted_home_score": 2,
       "predicted_away_score": 1,
-      "predicted_winner": "Draw"
+      "predicted_winner": "Croatia"
     },
     {
       "match_no": 69,
@@ -621,8 +621,8 @@
       "home_team": "Algeria",
       "away_team": "Austria",
       "predicted_home_score": 0,
-      "predicted_away_score": 0,
-      "predicted_winner": "Draw"
+      "predicted_away_score": 1,
+      "predicted_winner": "Austria"
     },
     {
       "match_no": 70,
@@ -630,7 +630,7 @@
       "home_team": "Jordan",
       "away_team": "Argentina",
       "predicted_home_score": 0,
-      "predicted_away_score": 3,
+      "predicted_away_score": 2,
       "predicted_winner": "Argentina"
     },
     {
@@ -648,212 +648,210 @@
       "home_team": "DR Congo",
       "away_team": "Uzbekistan",
       "predicted_home_score": 1,
-      "predicted_away_score": 0,
-      "predicted_winner": "DR Congo"
+      "predicted_away_score": 3,
+      "predicted_winner": "Uzbekistan"
     },
     {
       "match_no": 73,
-      "stage": "Round of 32 - 1",
+      "stage": "Round of 32",
+      "home_team": "Czech Rep.",
+      "away_team": "Switzerland",
+      "predicted_home_score": 2,
+      "predicted_away_score": 1,
+      "predicted_winner": "Czech Rep."
+    },
+    {
+      "match_no": 74,
+      "stage": "Round of 32",
+      "home_team": "Germany",
+      "away_team": "Paraguay",
+      "predicted_home_score": 2,
+      "predicted_away_score": 0,
+      "predicted_winner": "Germany"
+    },
+    {
+      "match_no": 75,
+      "stage": "Round of 32",
+      "home_team": "Japan",
+      "away_team": "Morocco",
+      "predicted_home_score": 1,
+      "predicted_away_score": 0,
+      "predicted_winner": "Japan"
+    },
+    {
+      "match_no": 76,
+      "stage": "Round of 32",
+      "home_team": "Brazil",
+      "away_team": "Netherlands",
+      "predicted_home_score": 2,
+      "predicted_away_score": 1,
+      "predicted_winner": "Brazil"
+    },
+    {
+      "match_no": 77,
+      "stage": "Round of 32",
+      "home_team": "France",
+      "away_team": "Sweden",
+      "predicted_home_score": 2,
+      "predicted_away_score": 1,
+      "predicted_winner": "France"
+    },
+    {
+      "match_no": 78,
+      "stage": "Round of 32",
+      "home_team": "Ecuador",
+      "away_team": "Senegal",
+      "predicted_home_score": 1,
+      "predicted_away_score": 2,
+      "predicted_winner": "Senegal"
+    },
+    {
+      "match_no": 79,
+      "stage": "Round of 32",
       "home_team": "Mexico",
-      "away_team": "Bosnia/Herzeg.",
+      "away_team": "Scotland",
       "predicted_home_score": 2,
       "predicted_away_score": 1,
       "predicted_winner": "Mexico"
     },
     {
-      "match_no": 74,
-      "stage": "Round of 32 - 3",
-      "home_team": "Germany",
-      "away_team": "Scotland",
-      "predicted_home_score": 1,
-      "predicted_away_score": 2,
-      "predicted_winner": "Scotland"
-    },
-    {
-      "match_no": 75,
-      "stage": "Round of 32 - 4",
-      "home_team": "Netherlands",
-      "away_team": "Morocco",
-      "predicted_home_score": 2,
-      "predicted_away_score": 1,
-      "predicted_winner": "Netherlands"
-    },
-    {
-      "match_no": 76,
-      "stage": "Round of 32 - 2",
-      "home_team": "Brazil",
-      "away_team": "Japan",
-      "predicted_home_score": 1,
-      "predicted_away_score": 0,
-      "predicted_winner": "Brazil"
-    },
-    {
-      "match_no": 77,
-      "stage": "Round of 32 - 6",
-      "home_team": "France",
-      "away_team": "Sweden",
-      "predicted_home_score": 2,
-      "predicted_away_score": 0,
-      "predicted_winner": "France"
-    },
-    {
-      "match_no": 78,
-      "stage": "Round of 32 - 5",
-      "home_team": "Ecuador",
-      "away_team": "Norway",
-      "predicted_home_score": 1,
-      "predicted_away_score": 3,
-      "predicted_winner": "Norway"
-    },
-    {
-      "match_no": 79,
-      "stage": "Round of 32 - 7",
-      "home_team": "Czech Rep.",
-      "away_team": "Uruguay",
-      "predicted_home_score": 1,
-      "predicted_away_score": 0,
-      "predicted_winner": "Czech Rep."
-    },
-    {
       "match_no": 80,
-      "stage": "Round of 32 - 8",
-      "home_team": "Croatia",
-      "away_team": "DR Congo",
+      "stage": "Round of 32",
+      "home_team": "England",
+      "away_team": "Norway",
       "predicted_home_score": 2,
       "predicted_away_score": 0,
-      "predicted_winner": "Croatia"
+      "predicted_winner": "England"
     },
     {
       "match_no": 81,
-      "stage": "Round of 32 - 10",
+      "stage": "Round of 32",
       "home_team": "USA",
-      "away_team": "Canada",
+      "away_team": "Bosnia/Herzeg.",
       "predicted_home_score": 2,
       "predicted_away_score": 1,
       "predicted_winner": "USA"
     },
     {
       "match_no": 82,
-      "stage": "Round of 32 - 9",
+      "stage": "Round of 32",
       "home_team": "Belgium",
-      "away_team": "Rep. of Korea",
+      "away_team": "Algeria",
       "predicted_home_score": 2,
-      "predicted_away_score": 1,
+      "predicted_away_score": 0,
       "predicted_winner": "Belgium"
     },
     {
       "match_no": 83,
-      "stage": "Round of 32 - 12",
+      "stage": "Round of 32",
       "home_team": "Colombia",
-      "away_team": "England",
+      "away_team": "Croatia",
       "predicted_home_score": 2,
-      "predicted_away_score": 0,
+      "predicted_away_score": 1,
       "predicted_winner": "Colombia"
     },
     {
       "match_no": 84,
-      "stage": "Round of 32 - 11",
+      "stage": "Round of 32",
       "home_team": "Spain",
       "away_team": "Austria",
-      "predicted_home_score": 3,
+      "predicted_home_score": 2,
       "predicted_away_score": 0,
       "predicted_winner": "Spain"
     },
     {
       "match_no": 85,
-      "stage": "Round of 32 - 13",
-      "home_team": "Switzerland",
-      "away_team": "IR Iran",
+      "stage": "Round of 32",
+      "home_team": "Canada",
+      "away_team": "Egypt",
       "predicted_home_score": 2,
-      "predicted_away_score": 0,
-      "predicted_winner": "Switzerland"
+      "predicted_away_score": 1,
+      "predicted_winner": "Canada"
     },
     {
       "match_no": 86,
-      "stage": "Round of 32 - 15",
+      "stage": "Round of 32",
       "home_team": "Argentina",
-      "away_team": "Saudi Arabia",
+      "away_team": "Uruguay",
       "predicted_home_score": 2,
-      "predicted_away_score": 0,
+      "predicted_away_score": 1,
       "predicted_winner": "Argentina"
     },
     {
       "match_no": 87,
-      "stage": "Round of 32 - 16",
+      "stage": "Round of 32",
       "home_team": "Portugal",
-      "away_team": "Ghana",
-      "predicted_home_score": 3,
+      "away_team": "Ivory Coast",
+      "predicted_home_score": 2,
       "predicted_away_score": 0,
       "predicted_winner": "Portugal"
     },
     {
       "match_no": 88,
-      "stage": "Round of 32 - 14",
+      "stage": "Round of 32",
       "home_team": "Turkey",
-      "away_team": "Egypt",
+      "away_team": "IR Iran",
       "predicted_home_score": 1,
       "predicted_away_score": 0,
       "predicted_winner": "Turkey"
     },
     {
       "match_no": 89,
-      "stage": "Round of 16 - 2",
-      "home_team": "Scotland",
+      "stage": "Round of 16",
+      "home_team": "Germany",
       "away_team": "France",
-      "predicted_home_score": 0,
-      "predicted_away_score": 3,
+      "predicted_home_score": 1,
+      "predicted_away_score": 2,
       "predicted_winner": "France"
     },
     {
       "match_no": 90,
-      "stage": "Round of 16 - 1",
-      "home_team": "Mexico",
-      "away_team": "Netherlands",
-      "predicted_home_score": 1,
-      "predicted_away_score": 2,
-      "predicted_winner": "Netherlands"
+      "stage": "Round of 16",
+      "home_team": "Czech Rep.",
+      "away_team": "Japan",
+      "predicted_home_score": 2,
+      "predicted_away_score": 1,
+      "predicted_winner": "Czech Rep."
     },
     {
       "match_no": 91,
-      "stage": "Round of 16 - 3",
+      "stage": "Round of 16",
       "home_team": "Brazil",
-      "away_team": "Norway",
-      "predicted_home_score": 2,
+      "away_team": "Senegal",
+      "predicted_home_score": 3,
       "predicted_away_score": 1,
       "predicted_winner": "Brazil"
     },
     {
       "match_no": 92,
-      "stage": "Round of 16 - 4",
-      "home_team": "Czech Rep.",
-      "away_team": "Croatia",
-      "predicted_home_score": 0,
+      "stage": "Round of 16",
+      "home_team": "Mexico",
+      "away_team": "England",
+      "predicted_home_score": 1,
       "predicted_away_score": 2,
-      "predicted_winner": "Croatia"
+      "predicted_winner": "England"
     },
     {
       "match_no": 93,
-      "stage": "Round of 16 - 5",
+      "stage": "Round of 16",
       "home_team": "Colombia",
       "away_team": "Spain",
       "predicted_home_score": 1,
-      "predicted_away_score": 1,
-      "predicted_winner": "Spain",
-      "penalty_home_score": 3,
-      "penalty_away_score": 5
+      "predicted_away_score": 2,
+      "predicted_winner": "Spain"
     },
     {
       "match_no": 94,
-      "stage": "Round of 16 - 6",
+      "stage": "Round of 16",
       "home_team": "USA",
       "away_team": "Belgium",
-      "predicted_home_score": 0,
+      "predicted_home_score": 1,
       "predicted_away_score": 2,
       "predicted_winner": "Belgium"
     },
     {
       "match_no": 95,
-      "stage": "Round of 16 - 7",
+      "stage": "Round of 16",
       "home_team": "Argentina",
       "away_team": "Turkey",
       "predicted_home_score": 2,
@@ -862,95 +860,93 @@
     },
     {
       "match_no": 96,
-      "stage": "Round of 16 - 8",
-      "home_team": "Switzerland",
+      "stage": "Round of 16",
+      "home_team": "Canada",
       "away_team": "Portugal",
       "predicted_home_score": 1,
-      "predicted_away_score": 1,
-      "predicted_winner": "Portugal",
-      "penalty_home_score": 2,
-      "penalty_away_score": 4
+      "predicted_away_score": 2,
+      "predicted_winner": "Portugal"
     },
     {
       "match_no": 97,
-      "stage": "Quarter final 1",
+      "stage": "Quarter Final",
       "home_team": "France",
-      "away_team": "Netherlands",
-      "predicted_home_score": 1,
-      "predicted_away_score": 2,
-      "predicted_winner": "Netherlands"
+      "away_team": "Czech Rep.",
+      "predicted_home_score": 2,
+      "predicted_away_score": 0,
+      "predicted_winner": "France"
     },
     {
       "match_no": 98,
-      "stage": "Quarter final 2",
+      "stage": "Quarter Final",
       "home_team": "Spain",
       "away_team": "Belgium",
-      "predicted_home_score": 3,
+      "predicted_home_score": 2,
       "predicted_away_score": 1,
       "predicted_winner": "Spain"
     },
     {
       "match_no": 99,
-      "stage": "Quarter final 3",
+      "stage": "Quarter Final",
       "home_team": "Brazil",
-      "away_team": "Croatia",
-      "predicted_home_score": 2,
-      "predicted_away_score": 0,
-      "predicted_winner": "Brazil"
+      "away_team": "England",
+      "predicted_home_score": 1,
+      "predicted_away_score": 2,
+      "predicted_winner": "England"
     },
     {
       "match_no": 100,
-      "stage": "Quarter final 4",
+      "stage": "Quarter Final",
       "home_team": "Argentina",
       "away_team": "Portugal",
-      "predicted_home_score": 1,
-      "predicted_away_score": 2,
-      "predicted_winner": "Portugal"
+      "predicted_home_score": 2,
+      "predicted_away_score": 1,
+      "predicted_winner": "Argentina"
     },
     {
       "match_no": 101,
-      "stage": "Semi-Final 1",
-      "home_team": "Netherlands",
+      "stage": "Semi Final",
+      "home_team": "France",
       "away_team": "Spain",
-      "predicted_home_score": 0,
+      "predicted_home_score": 2,
       "predicted_away_score": 1,
-      "predicted_winner": "Spain"
+      "predicted_winner": "France"
     },
     {
       "match_no": 102,
-      "stage": "Semi-Final 2",
-      "home_team": "Brazil",
-      "away_team": "Portugal",
-      "predicted_home_score": 1,
-      "predicted_away_score": 2,
-      "predicted_winner": "Portugal"
+      "stage": "Semi Final",
+      "home_team": "England",
+      "away_team": "Argentina",
+      "predicted_home_score": 2,
+      "predicted_away_score": 1,
+      "predicted_winner": "England"
     },
     {
       "match_no": 103,
       "stage": "Third Place",
-      "home_team": "Netherlands",
-      "away_team": "Brazil",
-      "predicted_home_score": 0,
+      "home_team": "Spain",
+      "away_team": "Argentina",
+      "predicted_home_score": 1,
       "predicted_away_score": 2,
-      "predicted_winner": "Brazil"
+      "predicted_winner": "Argentina"
     },
     {
       "match_no": 104,
       "stage": "Final",
-      "home_team": "Spain",
-      "away_team": "Portugal",
-      "predicted_home_score": 0,
-      "predicted_away_score": 1,
-      "predicted_winner": "Portugal"
+      "home_team": "France",
+      "away_team": "England",
+      "predicted_home_score": 1,
+      "predicted_away_score": 2,
+      "predicted_winner": "England"
     }
   ],
   "third_place": {
-    "team_1": "Netherlands",
-    "team_2": "Brazil"
+    "team_1": "Spain",
+    "team_2": "Argentina"
   },
   "final": {
-    "team_1": "Spain",
-    "team_2": "Portugal"
+    "team_1": "France",
+    "team_2": "England"
   },
-  "world_cup_winner": "Portugal"
+  "world_cup_winner": "England"
 }

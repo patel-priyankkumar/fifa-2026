@@ -905,7 +905,7 @@
     },
     {
       "match_no": 101,
-      "stage": "Semi-Final",
+      "stage": "Semi Final",
       "home_team": "France",
       "away_team": "Spain",
       "predicted_home_score": 2,
@@ -914,7 +914,7 @@
     },
     {
       "match_no": 102,
-      "stage": "Semi-Final",
+      "stage": "Semi Final",
       "home_team": "England",
       "away_team": "Argentina",
       "predicted_home_score": 1,

@@ -19,7 +19,7 @@
       "away_team": "Czech Rep.",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": ""
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 3,
@@ -55,7 +55,7 @@
       "away_team": "Turkey",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": ""
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 7,
@@ -64,7 +64,7 @@
       "away_team": "Morocco",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": ""
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 8,
@@ -82,7 +82,7 @@
       "away_team": "Ecuador",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": ""
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 10,
@@ -226,7 +226,7 @@
       "away_team": "South Africa",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": ""
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 26,
@@ -244,7 +244,7 @@
       "away_team": "Qatar",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": ""
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 28,
@@ -316,7 +316,7 @@
       "away_team": "Sweden",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": ""
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 36,
@@ -334,7 +334,7 @@
       "away_team": "Cape Verde",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": ""
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 38,
@@ -370,7 +370,7 @@
       "away_team": "Senegal",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": ""
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 42,
@@ -388,7 +388,7 @@
       "away_team": "Austria",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": ""
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 44,
@@ -469,7 +469,7 @@
       "away_team": "Qatar",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": ""
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 53,
@@ -532,7 +532,7 @@
       "away_team": "USA",
       "predicted_home_score": 2,
       "predicted_away_score": 2,
-      "predicted_winner": ""
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 60,
@@ -541,7 +541,7 @@
       "away_team": "Australia",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": ""
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 61,
@@ -550,7 +550,7 @@
       "away_team": "France",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": ""
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 62,
@@ -586,7 +586,7 @@
       "away_team": "Saudi Arabia",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": ""
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 66,
@@ -595,7 +595,7 @@
       "away_team": "Spain",
       "predicted_home_score": 2,
       "predicted_away_score": 2,
-      "predicted_winner": ""
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 67,
@@ -613,7 +613,7 @@
       "away_team": "Ghana",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": ""
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 69,
@@ -622,7 +622,7 @@
       "away_team": "Austria",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": ""
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 70,
@@ -640,7 +640,7 @@
       "away_team": "Portugal",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": ""
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 72,
@@ -649,7 +649,7 @@
       "away_team": "Uzbekistan",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": ""
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 73,
@@ -658,7 +658,7 @@
       "away_team": "Switzerland",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": "Switzerland"
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 74,
@@ -703,7 +703,7 @@
       "away_team": "Norway",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": "Norway"
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 79,
@@ -748,7 +748,7 @@
       "away_team": "Croatia",
       "predicted_home_score": 0,
       "predicted_away_score": 0,
-      "predicted_winner": "Croatia"
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 84,
@@ -775,7 +775,7 @@
       "away_team": "Uruguay",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": "Argentina"
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 87,
@@ -883,7 +883,7 @@
       "away_team": "Belgium",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": "Spain"
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 99,
@@ -905,7 +905,7 @@
     },
     {
       "match_no": 101,
-      "stage": "Semi-Final",
+      "stage": "Semi Final",
       "home_team": "France",
       "away_team": "Spain",
       "predicted_home_score": 2,
@@ -914,12 +914,12 @@
     },
     {
       "match_no": 102,
-      "stage": "Semi-Final",
+      "stage": "Semi Final",
       "home_team": "Brazil",
       "away_team": "Argentina",
       "predicted_home_score": 2,
       "predicted_away_score": 2,
-      "predicted_winner": "Argentina"
+      "predicted_winner": "Draw"
     },
     {
       "match_no": 103,
@@ -937,7 +937,7 @@
       "away_team": "Argentina",
       "predicted_home_score": 1,
       "predicted_away_score": 1,
-      "predicted_winner": "Argentina"
+      "predicted_winner": "Draw"
     }
   ],
   "third_place": {
