@@ -229,7 +229,10 @@ export async function readMemberFiles() {
         };
       }),
     );
-
+    console.log(
+      "Loaded members:",
+      members?.map((member) => member.name),
+    );
     return members;
   } catch (error) {
     console.error("Could not read members JSON folder:", error);
