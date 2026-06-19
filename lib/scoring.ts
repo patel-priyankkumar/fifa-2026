@@ -425,7 +425,7 @@ export function buildLeaderboard(
 ) {
   return members
     .map((member) => {
-      const result = calculateMemberPoints(member, matches, true);
+      const result = calculateMemberPoints(member, matches);
 
       return {
         id: member.id,
