@@ -60,6 +60,24 @@ export type LeaderboardMember = {
     world_cup_winner: number;
   };
 };
+export type MatchDebugLog = {
+  match_no: number;
+  stage: string;
+  match: string;
+  predicted_score: string;
+  actual_score: string;
+  predicted_result: string;
+  actual_result: string;
+  exact_score: boolean;
+  points_possible: { winner: number; exact: number } | null;
+  points_awarded: number;
+};
+
+export type CalculateMemberPointsResult = {
+  total: number;
+  breakdown: LeaderboardMember["breakdown"];
+  matchLogs?: MatchDebugLog[];
+};
 
 const MEMBERS_FOLDER = path.join(process.cwd(), "data", "members-JSON");
 
@@ -84,7 +102,10 @@ function resultDirection(home: number, away: number) {
   if (away > home) return "AWAY";
   return "DRAW";
 }
-function debugScoreRegularMatch(prediction: Prediction, match: Match) {
+function debugScoreRegularMatch(
+  prediction: Prediction,
+  match: Match,
+): MatchDebugLog {
   const score = scoreRegularMatch(prediction, match);
   const points = stagePoints(match.stage);
 
@@ -340,7 +361,7 @@ export function calculateMemberPoints(
   member: MemberFile,
   matches: Match[],
   debug = false,
-) {
+): CalculateMemberPointsResult {
   const matchByNo = new Map(matches.map((match) => [match.match_no, match]));
 
   const breakdown: LeaderboardMember["breakdown"] = {
@@ -354,7 +375,8 @@ export function calculateMemberPoints(
     world_cup_winner: 0,
   };
 
-  const matchLogs = [];
+
+  const matchLogs: MatchDebugLog[] = [];
 
   for (const prediction of member.predictions ?? []) {
     const match = matchByNo.get(prediction.match_no);
@@ -396,29 +418,92 @@ export function calculateMemberPoints(
     breakdown.final +
     breakdown.world_cup_winner;
 
+  // if (debug) {
+  //   console.log("\n====================================");
+  //   console.log(`Scoring for: ${member.name}`);
+  //   console.log("====================================");
+
+  //   console.table(matchLogs);
+
+  //   console.log("Bonus scoring:", {
+  //     third_place: breakdown.third_place,
+  //     final: breakdown.final,
+  //     world_cup_winner: breakdown.world_cup_winner,
+  //   });
+
+  //   console.log("Breakdown:", breakdown);
+  //   console.log("TOTAL:", total);
+  // }
+
   if (debug) {
-    console.log("\n====================================");
-    console.log(`Scoring for: ${member.name}`);
-    console.log("====================================");
-
-    console.table(matchLogs);
-
-    console.log("Bonus scoring:", {
-      third_place: breakdown.third_place,
-      final: breakdown.final,
-      world_cup_winner: breakdown.world_cup_winner,
+    matchLogs.push({
+      match_no: 103,
+      stage: "Third Place Bonus",
+      match: "Third Place Teams",
+      predicted_score: `${member.third_place?.team_1 ?? "-"} / ${member.third_place?.team_2 ?? "-"
+        }`,
+      actual_score: thirdPlaceMatch
+        ? `${thirdPlaceMatch.home_team} / ${thirdPlaceMatch.away_team}`
+        : "-",
+      predicted_result: "-",
+      actual_result: "-",
+      exact_score: false,
+      points_possible: null,
+      points_awarded: breakdown.third_place,
     });
 
-    console.log("Breakdown:", breakdown);
-    console.log("TOTAL:", total);
+    matchLogs.push({
+      match_no: 104,
+      stage: "Final Teams Bonus",
+      match: "Final Teams",
+      predicted_score: `${member.final?.team_1 ?? "-"} / ${member.final?.team_2 ?? "-"
+        }`,
+      actual_score: finalMatch
+        ? `${finalMatch.home_team} / ${finalMatch.away_team}`
+        : "-",
+      predicted_result: "-",
+      actual_result: "-",
+      exact_score: false,
+      points_possible: null,
+      points_awarded: breakdown.final,
+    });
+
+    matchLogs.push({
+      match_no: 105,
+      stage: "World Cup Winner Bonus",
+      match: "Winner",
+      predicted_score: member.world_cup_winner ?? "-",
+      actual_score: finalMatch ? getActualWinner(finalMatch) ?? "-" : "-",
+      predicted_result: "-",
+      actual_result: "-",
+      exact_score: false,
+      points_possible: null,
+      points_awarded: breakdown.world_cup_winner,
+    });
   }
 
   return {
     total,
     breakdown,
+    ...(debug ? { matchLogs } : {}),
   };
 }
+export function getMemberScoreDetails(
+  member: MemberFile & { id: string },
+  matches: Match[],
+) {
+  const result = calculateMemberPoints(member, matches, true);
 
+  return {
+    id: member.id,
+    name: member.name,
+    paid: member.paid ?? true,
+    entry_fee: member.entry_fee ?? 30,
+    points: result.total,
+    breakdown: result.breakdown,
+    matchLogs: result.matchLogs ?? [],
+  };
+}
 export function buildLeaderboard(
   members: Array<MemberFile & { id: string }>,
   matches: Match[],

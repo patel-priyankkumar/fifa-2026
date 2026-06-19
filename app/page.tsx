@@ -1,3 +1,4 @@
+// app/page.tsx
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
@@ -63,7 +64,25 @@ type State = {
   featured: { label: string; matches: Match[] };
   payouts: { paidEntries: number; pot: number; first: number; second: number };
 };
+type MatchDebugLog = {
+  match_no: number;
+  stage: string;
+  match: string;
+  predicted_score: string;
+  actual_score: string;
+  predicted_result: string;
+  actual_result: string;
+  exact_score: boolean;
+  points_awarded: number;
+};
 
+type PlayerScoreDetails = {
+  id: string;
+  name: string;
+  points: number;
+  breakdown: any;
+  matchLogs: MatchDebugLog[];
+};
 const money = new Intl.NumberFormat("en-CA", { style: "currency", currency: "CAD" });
 const dateFmt = new Intl.DateTimeFormat("en-CA", {
   weekday: "short",
@@ -134,6 +153,8 @@ export default function Home() {
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState("");
 
+  const [selectedPlayer, setSelectedPlayer] = useState<PlayerScoreDetails | null>(null);
+  const [playerLoading, setPlayerLoading] = useState(false);
   async function refresh() {
     const res = await fetch("/api/state", { cache: "no-store" });
     const data = await res.json();
@@ -227,7 +248,34 @@ export default function Home() {
     setMessage(data.message || "Match saved.");
     await refresh();
   }
+  async function openPlayerScoreSheet(memberId: string) {
+    try {
+      setPlayerLoading(true);
+      setMessage("");
 
+      console.log("Opening player score sheet:", memberId);
+
+      const res = await fetch(`/api/admin/entrants/${encodeURIComponent(memberId)}`, {
+        cache: "no-store",
+      });
+
+      const data = await res.json().catch(() => null);
+
+      if (!res.ok) {
+        console.error("Could not load player details:", data);
+        setMessage(data?.error || "Could not load player score sheet.");
+        return;
+      }
+
+      console.log("Player score sheet:", data);
+      setSelectedPlayer(data);
+    } catch (error) {
+      console.error("openPlayerScoreSheet failed:", error);
+      setMessage("Could not load player score sheet.");
+    } finally {
+      setPlayerLoading(false);
+    }
+  }
   if (loading || !state) {
     return <main className="loading">Loading SVP SPORTS FIFA 2026...</main>;
   }
@@ -337,7 +385,18 @@ export default function Home() {
           <div className="leaderboardList">
             {state.leaderboard.length === 0 && <div className="empty">No member JSON files found.</div>}
             {state.leaderboard.map((member, idx) => (
-              <article className="leaderRow" key={member.id}>
+              <article
+                className="leaderRow"
+                key={member.id}
+                role="button"
+                tabIndex={0}
+                onClick={() => openPlayerScoreSheet(member.id)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    openPlayerScoreSheet(member.id);
+                  }
+                }}
+              >
                 <div className="rank">#{idx + 1}</div>
                 <div className="leaderMain">
                   <strong>{member.name}</strong>
@@ -407,6 +466,20 @@ export default function Home() {
           ))}
         </div>
       </section>
+      {playerLoading && (
+        <div className="modalBackdrop">
+          <div className="modalCard smallModal">
+            <p>Loading score sheet...</p>
+          </div>
+        </div>
+      )}
+
+      {selectedPlayer && (
+        <PlayerScoreModal
+          player={selectedPlayer}
+          onClose={() => setSelectedPlayer(null)}
+        />
+      )}
     </main>
   );
 }
@@ -551,6 +624,93 @@ function ScoreEditor({
           Clear
         </button>
       </div>
+    </div>
+  );
+}
+function PlayerScoreModal({
+  player,
+  onClose,
+}: {
+  player: PlayerScoreDetails;
+  onClose: () => void;
+}) {
+  const logs = player.matchLogs ?? [];
+
+  return (
+    <div className="modalBackdrop">
+      <div className="scoreSheetModal">
+        <div className="modalHeader">
+          <div>
+            <p className="eyebrow">Player Score Sheet</p>
+            <h2>{player.name}</h2>
+            <p className="subtitle smallSubtitle">{player.points} total points</p>
+          </div>
+
+          <button onClick={onClose}>
+            Close
+          </button>
+        </div>
+
+        <div className="scoreSheetSummary">
+          <ScoreSummaryBox label="Group" value={player.breakdown.group_stage ?? 0} />
+          <ScoreSummaryBox label="Round 32" value={player.breakdown.round_of_32 ?? 0} />
+          <ScoreSummaryBox label="Round 16" value={player.breakdown.round_of_16 ?? 0} />
+          <ScoreSummaryBox label="Quarter" value={player.breakdown.quarter_final ?? 0} />
+          <ScoreSummaryBox label="Semi" value={player.breakdown.semi_final ?? 0} />
+          <ScoreSummaryBox label="Third" value={player.breakdown.third_place ?? 0} />
+          <ScoreSummaryBox label="Final" value={player.breakdown.final ?? 0} />
+          <ScoreSummaryBox label="Winner" value={player.breakdown.world_cup_winner ?? 0} />
+        </div>
+
+        <div className="scoreSheetTableWrap">
+          {logs.length === 0 ? (
+            <div className="empty">No match score logs found for this player.</div>
+          ) : (
+            <table className="scoreSheetTable">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Stage</th>
+                  <th>Match</th>
+                  <th>Predicted</th>
+                  <th>Actual</th>
+                  <th>Pred Result</th>
+                  <th>Actual Result</th>
+                  <th>Exact</th>
+                  <th>Points</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {logs.map((log) => (
+                  <tr key={`${log.match_no}-${log.stage}`}>
+                    <td>{log.match_no}</td>
+                    <td>{log.stage}</td>
+                    <td>{log.match}</td>
+                    <td>{log.predicted_score}</td>
+                    <td>{log.actual_score}</td>
+                    <td>{log.predicted_result}</td>
+                    <td>{log.actual_result}</td>
+                    <td>{log.exact_score ? "Yes" : "No"}</td>
+                    <td>
+                      <strong>{log.points_awarded}</strong>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ScoreSummaryBox({ label, value }: { label: string; value: number }) {
+  return (
+    <div className="scoreSummaryBox">
+      <span>{label}</span>
+      <strong>{value} pts</strong>
     </div>
   );
 }
