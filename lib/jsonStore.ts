@@ -69,27 +69,57 @@ export async function readJson<T>(filePath: string): Promise<GitHubFile<T>> {
 
   if (cfg) {
     const url = `https://api.github.com/repos/${cfg.repo}/contents/${filePath}?ref=${cfg.branch}`;
-    const res = await fetch(url, {
-      cache: "no-store",
-      headers: {
-        Authorization: `Bearer ${cfg.token}`,
-        Accept: "application/vnd.github+json",
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-    });
 
-    if (!res.ok) {
-      throw new Error(`Could not read ${filePath} from GitHub: ${res.status} ${await res.text()}`);
+    try {
+      const res = await fetch(url, {
+        cache: "no-store",
+        headers: {
+          Authorization: `Bearer ${cfg.token}`,
+          Accept: "application/vnd.github+json",
+          "X-GitHub-Api-Version": "2022-11-28",
+        },
+      });
+
+      if (!res.ok) {
+        console.warn(
+          `Could not read ${filePath} from GitHub. Falling back to local file. Status: ${res.status}`,
+        );
+      } else {
+        const payload = await res.json();
+        const encoded = String(payload.content || "").replace(/\n/g, "");
+        const json = Buffer.from(encoded, "base64").toString("utf8");
+
+        return {
+          data: JSON.parse(json),
+          sha: payload.sha,
+        };
+      }
+    } catch (error) {
+      console.warn(
+        `GitHub read failed for ${filePath}. Falling back to local file.`,
+        error,
+      );
     }
-
-    const payload = await res.json();
-    const encoded = String(payload.content || "").replace(/\n/g, "");
-    const json = Buffer.from(encoded, "base64").toString("utf8");
-    return { data: JSON.parse(json), sha: payload.sha };
   }
 
-  const text = await fs.readFile(localPath(filePath), "utf8");
-  return { data: JSON.parse(text) };
+  const fullPath = localPath(filePath);
+
+  try {
+    const text = await fs.readFile(fullPath, "utf8");
+
+    return {
+      data: JSON.parse(text),
+    };
+  } catch (error) {
+    console.error("Could not read local JSON file:", {
+      filePath,
+      fullPath,
+      cwd: process.cwd(),
+      error,
+    });
+
+    throw new Error(`Could not read ${filePath} from GitHub or local file`);
+  }
 }
 
 export async function writeJson<T>(filePath: string, data: T, sha?: string) {
