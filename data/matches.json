@@ -448,11 +448,11 @@
     "venue": "Houston",
     "home_team": "Netherlands",
     "away_team": "Sweden",
-    "home_score": null,
-    "away_score": null,
+    "home_score": 5,
+    "away_score": 1,
     "home_penalty": null,
     "away_penalty": null,
-    "status": "scheduled"
+    "status": "completed"
   },
   {
     "match_no": 36,
