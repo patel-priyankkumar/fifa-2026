@@ -283,10 +283,10 @@ export default function Home() {
   return (
     <main>
       <section className="hero">
-        <div className="heroGlow" />
+        {/* <div className="heroGlow" /> */}
         <div className="nav">
           <div className="brand">
-            <span>SVP</span> SPORTS FIFA 2026
+            <span>FIFA 2026</span>
           </div>
           <button className="ghost" onClick={() => setAdminOpen(!adminOpen)}>
             {state.isAdmin ? "Admin Panel" : "Admin Login"}
