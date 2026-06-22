@@ -277,7 +277,7 @@ export default function Home() {
     }
   }
   if (loading || !state) {
-    return <main className="loading">Loading SVP SPORTS FIFA 2026...</main>;
+    return <main className="loading">Loading FIFA 2026...</main>;
   }
 
   return (
@@ -298,7 +298,7 @@ export default function Home() {
             <p className="eyebrow">World Cup Prediction Pool</p>
             <h1>Full match predictions, live standings, and prize payouts.</h1>
             <p className="subtitle">
-              Player predictions are loaded from <strong>data/members-JSON</strong>. Admin updates real match scores;
+              Admin updates real match scores;
               the app recalculates every player automatically using the official pool scoring rules.
             </p>
           </div>
@@ -336,7 +336,6 @@ export default function Home() {
               <div className="adminCard">
                 <h2>Prediction Files</h2>
                 <p>
-                  Add each player file to <strong>data/members-JSON</strong>, for example <strong>aniket.json</strong>.
                   The site reads all JSON files and lists every player automatically.
                 </p>
                 <button onClick={checkJsonFiles} disabled={saving}>

@@ -142,7 +142,7 @@ export async function writeJson<T>(filePath: string, data: T, sha?: string) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        message: `Update ${filePath} from SVP SPORTS FIFA 2026 admin`,
+        message: `Update ${filePath} from FIFA 2026 admin`,
         content: Buffer.from(content, "utf8").toString("base64"),
         sha,
         branch: cfg.branch,

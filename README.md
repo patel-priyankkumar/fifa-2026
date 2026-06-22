@@ -1,6 +1,6 @@
-# SVP SPORTS FIFA 2026
+# FIFA 2026
 
-A Vercel-ready single-page Next.js app for the SVP Sports FIFA 2026 pool.
+A Vercel-ready single-page Next.js app for the FIFA 2026 pool.
 
 ## What it does
 
