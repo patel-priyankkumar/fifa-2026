@@ -565,11 +565,11 @@
     "venue": "San Francisco Bay Area",
     "home_team": "Jordan",
     "away_team": "Algeria",
-    "home_score": null,
-    "away_score": null,
+    "home_score": 1,
+    "away_score": 2,
     "home_penalty": null,
     "away_penalty": null,
-    "status": "scheduled"
+    "status": "completed"
   },
   {
     "match_no": 45,
