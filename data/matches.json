@@ -591,11 +591,11 @@
     "venue": "Toronto",
     "home_team": "Panama",
     "away_team": "Croatia",
-    "home_score": null,
-    "away_score": null,
+    "home_score": 0,
+    "away_score": 1,
     "home_penalty": null,
     "away_penalty": null,
-    "status": "scheduled"
+    "status": "completed"
   },
   {
     "match_no": 47,
