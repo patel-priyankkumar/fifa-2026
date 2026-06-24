@@ -656,11 +656,11 @@
     "venue": "Vancouver",
     "home_team": "Switzerland",
     "away_team": "Canada",
-    "home_score": null,
-    "away_score": null,
+    "home_score": 2,
+    "away_score": 1,
     "home_penalty": null,
     "away_penalty": null,
-    "status": "scheduled"
+    "status": "completed"
   },
   {
     "match_no": 52,
