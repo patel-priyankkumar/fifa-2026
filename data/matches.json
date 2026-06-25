@@ -630,11 +630,11 @@
     "venue": "Miami",
     "home_team": "Scotland",
     "away_team": "Brazil",
-    "home_score": null,
-    "away_score": null,
+    "home_score": 0,
+    "away_score": 3,
     "home_penalty": null,
     "away_penalty": null,
-    "status": "scheduled"
+    "status": "completed"
   },
   {
     "match_no": 50,
