@@ -695,11 +695,11 @@
     "venue": "Monterrey",
     "home_team": "South Africa",
     "away_team": "Rep. of Korea",
-    "home_score": null,
-    "away_score": null,
+    "home_score": 1,
+    "away_score": 0,
     "home_penalty": null,
     "away_penalty": null,
-    "status": "scheduled"
+    "status": "completed"
   },
   {
     "match_no": 55,
