@@ -643,11 +643,11 @@
     "venue": "Atlanta",
     "home_team": "Morocco",
     "away_team": "Haiti",
-    "home_score": null,
-    "away_score": null,
+    "home_score": 4,
+    "away_score": 2,
     "home_penalty": null,
     "away_penalty": null,
-    "status": "scheduled"
+    "status": "completed"
   },
   {
     "match_no": 51,
