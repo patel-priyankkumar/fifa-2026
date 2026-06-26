@@ -747,11 +747,11 @@
     "venue": "Kansas City",
     "home_team": "Tunisia",
     "away_team": "Netherlands",
-    "home_score": null,
-    "away_score": null,
+    "home_score": 1,
+    "away_score": 3,
     "home_penalty": null,
     "away_penalty": null,
-    "status": "scheduled"
+    "status": "completed"
   },
   {
     "match_no": 59,
