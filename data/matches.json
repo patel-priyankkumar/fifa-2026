@@ -773,11 +773,11 @@
     "venue": "San Francisco Bay Area",
     "home_team": "Paraguay",
     "away_team": "Australia",
-    "home_score": null,
-    "away_score": null,
+    "home_score": 0,
+    "away_score": 0,
     "home_penalty": null,
     "away_penalty": null,
-    "status": "scheduled"
+    "status": "completed"
   },
   {
     "match_no": 61,
