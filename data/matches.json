@@ -929,11 +929,11 @@
     "venue": "Atlanta",
     "home_team": "DR Congo",
     "away_team": "Uzbekistan",
-    "home_score": null,
-    "away_score": null,
+    "home_score": 3,
+    "away_score": 1,
     "home_penalty": null,
     "away_penalty": null,
-    "status": "scheduled"
+    "status": "completed"
   },
   {
     "match_no": 73,
