@@ -825,11 +825,11 @@
     "venue": "Vancouver",
     "home_team": "New Zealand",
     "away_team": "Belgium",
-    "home_score": null,
-    "away_score": null,
+    "home_score": 1,
+    "away_score": 5,
     "home_penalty": null,
     "away_penalty": null,
-    "status": "scheduled"
+    "status": "completed"
   },
   {
     "match_no": 65,
